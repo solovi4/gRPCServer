@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService";
+
+package greet;
+
+// The greeting service definition.
+service Randomizer {
+  // Sends a greeting
+  rpc GetRandom (RandomRequest) returns (RandomResponse);
+}
+
+// The empty request message
+message RandomRequest {
+}
+
+// The response message containing the greetings.
+message RandomResponse {
+  int32 numb = 1;
+}
